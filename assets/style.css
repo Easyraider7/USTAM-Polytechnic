@@ -1,0 +1,109 @@
+.foot {
+    margin-top: 5em
+}
+
+.foot-1 {
+    position: relative;
+    bottom: 5em
+}
+
+.active {
+    color: #001A4D;
+}
+
+.nav-link {
+    color: #daba2d;
+    position: relative;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: #001A4D;
+  }
+  
+  @media (min-width: 991px) {
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #001A4D;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+  
+    .nav-link:hover::before, .nav-link.active::before {
+      width: 100%;
+      visibility: visible;
+    }
+  }
+
+ /* Ensure dropdown menus appear on hover */
+ .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+
+.sticky-logo {
+    position: sticky;
+    top: 100px;
+    filter: blur(0px); /* Adds a blur effect to the logo */
+    background: white; /* Adds a background to prevent overlapping */
+    padding: 10px; /* Adds spacing around the logo */
+}
+
+.faq-section {
+    min-height: 100vh; /* Ensures full-height FAQ section */
+}
+
+ /* Make the image cover the whole page */
+ .hero-image {
+  background-image: url("./images/welcome_image.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  color: white;
+}
+
+/* Optional: Dark overlay for better text readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Centered text */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  top: 30%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+input[type="submit"] {
+  background-color: #001A4D;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+input[type="submit"]:hover {
+  background-color: #daba2d; 
+}
