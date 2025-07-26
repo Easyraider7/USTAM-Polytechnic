@@ -1,1 +1,0 @@
-"# USTAM-Polytechnic" 
